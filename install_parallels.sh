@@ -10,7 +10,7 @@ if [ -d "/home/${USER}/Desktop/Parallels Shared Folders/Home/.ssh" ]; then
     chmod 600 "${HOME}/.ssh/*"
 fi
 
-if [ ! -d ~/.config-desktop-home ]; then
+if [ ! -d ${HOME}/.config-desktop-home ]; then
     echo "\033[0;32m Installation de python.......\033[0m"
     sudo apt-get install -y -qq python python-pip git git-core openssh-server libssl-dev
 
