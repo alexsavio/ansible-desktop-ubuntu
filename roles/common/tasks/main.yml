@@ -1,0 +1,37 @@
+---
+
+- name: APT | Update cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- name: Package | Install lists packages
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - aptitude
+    - bash-completion
+    - openssh-server
+    - vim
+    - git
+    - git-core
+    - git-extras
+    - curl
+    - wget
+    - htop
+    - ack-grep
+    - ccze
+    - tmux
+    - tig
+    - unzip
+    - tar
+    - gzip
+    - bzip2
+    - pwgen
+    - fish
+
+- name: Java Oracle | Add repository
+  apt_repository: repo='ppa:webupd8team/java' state=present update_cache=yes
+
+- name: Java Oracle | Automatically select the Oracle License
+  shell: echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+
+- name: Java Oracle | Install version 1.9.x
+  apt: name=oracle-java9-installer state=installed force=yes

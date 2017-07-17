@@ -1,0 +1,24 @@
+##
+# Ansible playbook for setting up a development on Ubuntu 16.04.
+#
+---
+
+- hosts: local
+  become: yes
+  become_method: sudo
+
+  vars_files:
+    - group_vars/all.yml
+
+  roles:
+    - common       # List of essential packages
+    - vim          # Configuration for vim
+    - web
+    - mongodb
+    - composer
+    - nodejs
+    - dotfile      # My dotfile (config : git, zsh, bash, tig, ...)
+    - conky
+    - gnome-shell  # Extension and custom template
+    - synapse      # Launcher apps.
+#    - gnome-boxes  # Virtual machine
