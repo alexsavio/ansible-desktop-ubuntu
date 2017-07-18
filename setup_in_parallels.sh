@@ -21,3 +21,7 @@ sudo pip install ansible
 
 echo "Clone de la config d'installation."
 sudo -u `whoami` -H git clone git@git.maibornwolff.de:Tracking-AR-Testbench/dev_provision.git $HOME/.config-desktop-home
+
+echo "Running the install script from dev_provision"
+cd $HOME/.config-desktop-home
+./install.sh
