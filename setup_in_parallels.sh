@@ -11,7 +11,7 @@ if [ -d "/home/${USER}/Desktop/Parallels Shared Folders/Home/.ssh" ]; then
 fi
 
 echo "Installation de python......."
-sudo apt-get install -y -qq python python-pip git git-core openssh-server libssl-dev
+sudo apt-get install -y -qq python python-pip git git-core openssh-server libssl-dev aptitude
 
 echo "Installation d'ansible......."
 sudo pip install -U pip setuptools
