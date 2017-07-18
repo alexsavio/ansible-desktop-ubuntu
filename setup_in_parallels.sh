@@ -17,7 +17,7 @@ echo "Installation d'ansible......."
 sudo pip install -U pip setuptools
 
 echo "Installation d'ansible......."
-sudo pip install ansible
+sudo pip install -r requirements.txt
 
 echo "Clone de la config d'installation."
 sudo -u `whoami` -H git clone git@git.maibornwolff.de:Tracking-AR-Testbench/dev_provision.git $HOME/.config-desktop-home
