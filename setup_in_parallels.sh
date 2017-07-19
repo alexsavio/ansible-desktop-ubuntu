@@ -4,7 +4,7 @@ CURRENT=`pwd`
 
 if [ -d "/home/${USER}/Desktop/Parallels Shared Folders/Home/.ssh" ]; then
     mkdir "${HOME}/.ssh"
-    cp -rdv /home/tracking/Desktop/Parallels\ Shared\ Folders/Home/.ssh/id_rsa* "${HOME}/.ssh"
+    cp -rdv ${HOME}/Desktop/Parallels\ Shared\ Folders/Home/.ssh/id_rsa* "${HOME}/.ssh"
 
     chmod 700 ${HOME}/.ssh
     chmod 600 ${HOME}/.ssh/*
