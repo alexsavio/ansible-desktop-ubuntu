@@ -11,13 +11,13 @@ if [ -d "/home/${USER}/Desktop/Parallels Shared Folders/Home/.ssh" ]; then
 fi
 
 echo "Installation de python......."
-sudo apt-get install -y -qq python python-pip git git-core openssh-server libssl-dev aptitude
+sudo apt-get install -y -qq python python-pip git git-core openssh-server libssl-dev aptitude python-apt
 
 echo "Installation d'ansible......."
 sudo pip install -U pip setuptools
 
 echo "Installation d'ansible......."
-sudo pip install ansible==2.3.1.0 lxml==3.8.0 python-apt==1.1.0b1
+sudo pip install ansible==2.3.1.0 lxml==3.8.0
 
 echo "Clone de la config d'installation."
 sudo -u `whoami` -H git clone git@git.maibornwolff.de:Tracking-AR-Testbench/dev_provision.git $HOME/.config-desktop-home
